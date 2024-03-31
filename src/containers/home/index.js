@@ -1,32 +1,39 @@
 import React from "react";
 
-import Movies from "@/mocks/movies.json";
-import Genres from "@/mocks/genres.json";
-
 import { FeaturedMovie } from "@/components/featured-movie";
 import { Categories } from "@/components/categories";
 import { MoviesSection } from "@/components/movies-section";
 
-function HomeContainer({ selectedCategory }) {
+function HomeContainer({
+  categories = [],
+  topRatedMovies = [],
+  popularMovies = [],
+  upComingMovies = [],
+  selectedCategory,
+}) {
   return (
     <div>
-      <FeaturedMovie movie={Movies.results[3]} />
-      <Categories categories={Genres.genres.slice(0, 5)} />
+      <FeaturedMovie movie={topRatedMovies?.[5]} />
+      <Categories categories={categories.slice(0, 5)} />
       {selectedCategory.movies.length > 0 && (
         <MoviesSection
           title={
-            Genres.genres.find((genre) => `${genre.id}` === selectedCategory.id)
+            categories.find((genre) => `${genre.id}` === selectedCategory.id)
               .name
           }
           movies={selectedCategory.movies}
         />
       )}
 
-      <MoviesSection title="En yeniler " movies={Movies.results.slice(1, 7)} />
       <MoviesSection
-        title="En çok izlenen"
-        movies={Movies.results.slice(7, 13)}
+        title="Popüler Filmler "
+        movies={topRatedMovies.slice(1, 7)}
       />
+      <MoviesSection
+        title="En Beğenilen "
+        movies={popularMovies.slice(7, 13)}
+      />
+      <MoviesSection title="Yakında " movies={upComingMovies.slice(7, 13)} />
     </div>
   );
 }
