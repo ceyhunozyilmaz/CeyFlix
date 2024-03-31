@@ -1,6 +1,6 @@
 # CeyFlix
 
-![CeyFlix Görünümü](https://drive.google.com/drive/u/0/my-drive)
+![CeyFlix Görünümü](https://imgur.com/a/ErZkazh)
 
 
 
