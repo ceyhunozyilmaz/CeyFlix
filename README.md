@@ -1,6 +1,6 @@
 # CeyFlix
 
-![CeyFlix Görünümü](https://imgur.com/a/XEXtb8V)
+![CeyFlix Görünümü](file:///Users/cey/Desktop/preview.png
 
 
 CeyFlix, Netflix'e benzer bir web uygulamasıdır. Kullanıcıların film ve dizi içeriklerini bulabileceği, izleyebileceği ve beğendikleri içerikleri kaydedebileceği bir platform sağlar.
